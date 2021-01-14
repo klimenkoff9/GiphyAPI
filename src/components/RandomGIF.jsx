@@ -19,7 +19,7 @@ class RandomGIF extends Component {
         return (
         <form>
           <div>
-            <button onClick={this.handleSubmit}>Magic Random GIF</button>
+            <button onClick={this.handleSubmit}>Magic Random GIF button</button>
           </div>
         </form>
         )
