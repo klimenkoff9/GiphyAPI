@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Display from "./Display";
 import SearchForm from "./SearchForm"
+import RandomGIF from "./RandomGIF"
 
 class Home extends Component {
   constructor() {
@@ -30,6 +31,11 @@ class Home extends Component {
     return (
       <section>
         <SearchForm 
+            apiKey={this.state.apiKey}
+            updateState={this.updateState}
+            gifs={this.state.gifs}
+        />
+        <RandomGIF
             apiKey={this.state.apiKey}
             updateState={this.updateState}
             gifs={this.state.gifs}
