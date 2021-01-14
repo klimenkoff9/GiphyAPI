@@ -3,6 +3,7 @@ import axios from "axios";
 import Display from "./Display";
 import SearchForm from "./SearchForm"
 import RandomGIF from "./RandomGIF"
+
 class Home extends Component {
   constructor() {
     super();
@@ -41,9 +42,6 @@ class Home extends Component {
         />
 
         {this.state.gifs.map((gif) => {
-          {/* const {
-            url
-          } = gif; */}
           return <Display url={gif.images.original.url} />
         })}
       </section>
