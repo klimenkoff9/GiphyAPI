@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Display from "./Display";
 import SearchForm from "./SearchForm"
-import RandomGIF from "./RandomGIF"
+
 class Home extends Component {
   constructor() {
     super();
@@ -34,16 +34,8 @@ class Home extends Component {
             updateState={this.updateState}
             gifs={this.state.gifs}
         />
-        <RandomGIF
-            apiKey={this.state.apiKey}
-            updateState={this.updateState}
-            gifs={this.state.gifs}
-        />
 
         {this.state.gifs.map((gif) => {
-          {/* const {
-            url
-          } = gif; */}
           return <Display url={gif.images.original.url} />
         })}
       </section>
